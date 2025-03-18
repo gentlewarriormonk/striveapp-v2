@@ -69,8 +69,25 @@ export function calculateStreak(logs: { log_date: string; completed: boolean }[]
   return streak;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function calculateXP(tasks: any[], habits: any[], habitLogs: any[]): number {
+// Define proper interfaces for your data types
+interface Task {
+  status: string;
+  [key: string]: any; // Allow other properties
+}
+
+interface Habit {
+  id: string | number;
+  [key: string]: any; // Allow other properties
+}
+
+interface HabitLog {
+  habit_id: string | number;
+  log_date: string;
+  completed: boolean;
+  [key: string]: any; // Allow other properties
+}
+
+export function calculateXP(tasks: Task[], habits: Habit[], habitLogs: HabitLog[]): number {
   let totalXP = 0;
   
   // XP for completed tasks
