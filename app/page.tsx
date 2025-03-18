@@ -1,19 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "./ThemeProvider";
 
 export default function Home() {
-  const { theme } = useTheme();
-  
   return (
-    <div className={`min-h-screen ${theme === "dark" ? "bg-gradient-to-b from-gray-900 to-blue-950 text-white" : "bg-gradient-to-b from-white to-blue-50 text-gray-900"}`}>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-950 text-white">
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto">
         <div className="flex items-center">
           <Image
-            src={theme === "dark" ? "/strive logo white on transparent.png" : "/Strive full colour with padding.png"}
+            src="/strive logo white on transparent.png"
             alt="StriveApp Logo"
             width={150}
             height={40}
@@ -23,13 +18,13 @@ export default function Home() {
         <div className="flex items-center space-x-4">
           <Link
             href="/login"
-            className={`px-4 py-2 rounded-md ${theme === "dark" ? "text-blue-300 hover:text-blue-200" : "text-blue-700 hover:text-blue-800"}`}
+            className="px-4 py-2 rounded-md text-blue-300 hover:text-blue-200"
           >
             Login
           </Link>
           <Link
             href="/register"
-            className={`px-4 py-2 rounded-md ${theme === "dark" ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-blue-600 text-white hover:bg-blue-700"}`}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
           >
             Sign Up
           </Link>
@@ -40,11 +35,11 @@ export default function Home() {
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Grow Your Habits,{" "}
-              <span className={theme === "dark" ? "text-blue-400" : "text-blue-600"}>Grow Your Success</span>
+              <span className="text-blue-400">Grow Your Success</span>
             </h2>
-            <p className={`text-lg mb-8 ${theme === "dark" ? "text-blue-100" : "text-gray-700"}`}>
+            <p className="text-lg text-blue-100 mb-8">
               StriveApp helps students develop self-regulation and organizational
               skills through gamified habit and task management. Track your
               progress, earn XP, and watch yourself grow.
@@ -52,17 +47,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/register"
-                className={`px-6 py-3 rounded-md text-center ${theme === "dark" ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-blue-600 text-white hover:bg-blue-700"}`}
+                className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-center"
               >
                 Get Started
               </Link>
               <Link
                 href="#features"
-                className={`px-6 py-3 border rounded-md text-center ${
-                  theme === "dark" 
-                    ? "border-blue-500 text-blue-400 hover:bg-blue-900/30" 
-                    : "border-blue-600 text-blue-600 hover:bg-blue-50"
-                }`}
+                className="px-6 py-3 border border-blue-500 text-blue-400 rounded-md hover:bg-blue-900/30 text-center"
               >
                 Learn More
               </Link>
@@ -70,12 +61,8 @@ export default function Home() {
           </div>
           <div className="relative h-[400px]">
             {/* Replace with your own image */}
-            <div className={`absolute inset-0 rounded-lg flex items-center justify-center ${
-              theme === "dark" ? "bg-blue-900/30" : "bg-blue-100"
-            }`}>
-              <div className={`text-xl font-semibold ${
-                theme === "dark" ? "text-blue-300" : "text-blue-700"
-              }`}>
+            <div className="absolute inset-0 bg-blue-900/30 rounded-lg flex items-center justify-center">
+              <div className="text-blue-300 text-xl font-semibold">
                 Plant Growth Illustration
               </div>
             </div>
@@ -84,20 +71,18 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className={`py-16 px-6 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
+      <section id="features" className="py-16 px-6 bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className={`text-3xl font-bold text-center mb-12 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
             Key Features
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className={`p-6 rounded-lg ${theme === "dark" ? "bg-blue-950/50" : "bg-blue-50"}`}>
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
-                theme === "dark" ? "bg-blue-900/50" : "bg-blue-100"
-              }`}>
+            <div className="bg-blue-950/50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-6 w-6 ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}
+                  className="h-6 w-6 text-blue-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -110,23 +95,21 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className={`text-xl font-semibold mb-2 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+              <h3 className="text-xl font-semibold text-white mb-2">
                 Task Management
               </h3>
-              <p className={theme === "dark" ? "text-blue-200" : "text-gray-700"}>
+              <p className="text-blue-200">
                 Create, organize, and complete tasks with due dates, priorities,
                 and categories. Track homework and personal tasks in one place.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className={`p-6 rounded-lg ${theme === "dark" ? "bg-blue-950/50" : "bg-blue-50"}`}>
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
-                theme === "dark" ? "bg-blue-900/50" : "bg-blue-100"
-              }`}>
+            <div className="bg-blue-950/50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-6 w-6 ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}
+                  className="h-6 w-6 text-blue-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -139,23 +122,21 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className={`text-xl font-semibold mb-2 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+              <h3 className="text-xl font-semibold text-white mb-2">
                 Habit Tracking
               </h3>
-              <p className={theme === "dark" ? "text-blue-200" : "text-gray-700"}>
+              <p className="text-blue-200">
                 Build consistent habits with daily check-ins, streak tracking,
                 and performance metrics to help you stay on course.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className={`p-6 rounded-lg ${theme === "dark" ? "bg-blue-950/50" : "bg-blue-50"}`}>
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
-                theme === "dark" ? "bg-blue-900/50" : "bg-blue-100"
-              }`}>
+            <div className="bg-blue-950/50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-6 w-6 ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}
+                  className="h-6 w-6 text-blue-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -168,10 +149,10 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className={`text-xl font-semibold mb-2 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+              <h3 className="text-xl font-semibold text-white mb-2">
                 Gamification
               </h3>
-              <p className={theme === "dark" ? "text-blue-200" : "text-gray-700"}>
+              <p className="text-blue-200">
                 Earn XP for completing tasks and maintaining habits. Progress
                 through 10 plant-based tiers from Seed to World Tree.
               </p>
@@ -181,45 +162,45 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className={`py-12 px-6 ${theme === "dark" ? "bg-gray-950" : "bg-gray-100"}`}>
+      <footer className="py-12 px-6 bg-gray-950">
         <div className="max-w-7xl mx-auto text-center">
           <Image
-            src={theme === "dark" ? "/strive logo white on transparent.png" : "/Strive full colour with padding.png"}
+            src="/strive logo white on transparent.png"
             alt="StriveApp Logo"
             width={120}
             height={40}
             className="mx-auto mb-6"
           />
-          <p className={`mb-6 ${theme === "dark" ? "text-blue-300" : "text-blue-700"}`}>
+          <p className="text-blue-300 mb-6">
             Helping students build better habits, one task at a time.
           </p>
           <div className="flex justify-center space-x-6 mb-8">
             <Link 
               href="#" 
-              className={theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"}
+              className="text-blue-400 hover:text-blue-300"
             >
               About
             </Link>
             <Link 
               href="#" 
-              className={theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"}
+              className="text-blue-400 hover:text-blue-300"
             >
               Privacy
             </Link>
             <Link 
               href="#" 
-              className={theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"}
+              className="text-blue-400 hover:text-blue-300"
             >
               Terms
             </Link>
             <Link 
               href="#" 
-              className={theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"}
+              className="text-blue-400 hover:text-blue-300"
             >
               Contact
             </Link>
           </div>
-          <p className={`text-sm ${theme === "dark" ? "text-blue-500" : "text-blue-600"}`}>
+          <p className="text-sm text-blue-500">
             &copy; {new Date() .getFullYear()} StriveApp. All rights reserved.
           </p>
         </div>
