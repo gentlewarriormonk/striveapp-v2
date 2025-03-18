@@ -72,19 +72,19 @@ export function calculateStreak(logs: { log_date: string; completed: boolean }[]
 // Define proper interfaces for your data types
 interface Task {
   status: string;
-  [key: string]: any; // Allow other properties
+  // Add other specific properties you need
 }
 
 interface Habit {
   id: string | number;
-  [key: string]: any; // Allow other properties
+  // Add other specific properties you need
 }
 
 interface HabitLog {
   habit_id: string | number;
   log_date: string;
   completed: boolean;
-  [key: string]: any; // Allow other properties
+  // Add other specific properties you need
 }
 
 export function calculateXP(tasks: Task[], habits: Habit[], habitLogs: HabitLog[]): number {
