@@ -69,6 +69,7 @@ export function calculateStreak(logs: { log_date: string; completed: boolean }[]
   return streak;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function calculateXP(tasks: any[], habits: any[], habitLogs: any[]): number {
   let totalXP = 0;
   
