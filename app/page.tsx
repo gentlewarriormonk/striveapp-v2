@@ -7,7 +7,13 @@ export default function Home() {
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-green-700">StriveApp</h1>
+          <Image 
+            src="/Strive full colour with padding.png" // Use the actual filename of your logo
+            alt="StriveApp Logo"
+            width={150} // Adjust based on your logo's dimensions
+            height={40} // Adjust based on your logo's dimensions
+            priority
+          />
         </div>
         <div className="flex items-center space-x-4">
           <Link href="/login" className="px-4 py-2 rounded-md text-green-700 hover:text-green-800">
