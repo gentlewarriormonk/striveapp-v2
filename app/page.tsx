@@ -41,8 +41,8 @@ export default function Home() {
             </h2>
             <p className="text-lg text-blue-100 mb-8">
               StriveApp helps students develop self-regulation and organizational
-              skills through gamified habit and task management. Track your
-              progress, earn XP, and watch yourself grow.
+              skills through gamified habit and task management. Track your progress, earn XP, and
+              watch yourself grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -201,7 +201,7 @@ export default function Home() {
             </Link>
           </div>
           <p className="text-sm text-blue-500">
-            &copy; {new Date() .getFullYear()} StriveApp. All rights reserved.
+            &copy; {new Date().getFullYear()} StriveApp. All rights reserved.
           </p>
         </div>
       </footer>
