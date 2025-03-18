@@ -3,29 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-gray-900 dark:text-white bg-white dark:bg-gray-900;
+  }
+  
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    
     --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
-    
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --primary-light: 195 100% 44%;
   }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-  }
-}
-
-html, body {
-  height: 100%;
 }
