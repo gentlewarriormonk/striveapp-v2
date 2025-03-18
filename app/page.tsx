@@ -149,7 +149,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Growth Journey</h2>
           <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-            As you complete tasks and maintain habits, you'll earn XP and progress through our 10-tier plant growth system.
+            As you complete tasks and maintain habits, you&apos;ll earn XP and progress through our 10-tier plant growth system.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
