@@ -47,9 +47,6 @@ export function ThemeProvider({
     root.classList.remove("light", "dark");
     root.classList.add(theme);
     
-    // Also set data-theme attribute for extra compatibility
-    root.setAttribute('data-theme', theme);
-    
     localStorage.setItem(storageKey, theme);
   }, [theme]);
 
